@@ -12,13 +12,13 @@ from stable_baselines3 import PPO
 # --- File Paths ---
 current_dir = os.getcwd()  # Streamlit workaround
 orders_path = os.path.join(current_dir, 'orders.csv')
-shelves_path = os.path.join(current_dir, 'shelves.csv')
+shelves_path = os.path.join(current_dir, 'Shelves.csv')
 robots_path = os.path.join(current_dir, 'robots.csv')
 
 # --- Load Data ---
-orders_df = pd.read_csv('/content/Shelves.csv')
-shelves_df = pd.read_csv('/content/Shelves.csv')
-robots_df = pd.read_csv('/content/robots.csv')
+orders_df = pd.read_csv(orders_path)
+shelves_df = pd.read_csv(shelves_path)
+robots_df = pd.read_csv(robots_path)
 
 # --- Distance Matrix ---
 shelves_locations = shelves_df[['Location_X', 'Location_Y']].to_numpy()
